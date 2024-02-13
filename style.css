@@ -1,8 +1,11 @@
 body{
-    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-family:'Sixtyfour';
     text-align: center;
+    background-image: url('background.jpeg');
 }
 
 #board{
     background-color: black;
+    border: 1px solid white;
 }
