@@ -9,3 +9,12 @@ body{
     background-color: black;
     border: 1px solid white;
 }
+
+#retryButton{
+    color: rgb(255, 2, 2);
+    font-family:'Sixtyfour';
+    text-align: center;
+
+    position: relative;
+    left: 47%;   
+}

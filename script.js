@@ -2,7 +2,8 @@
 const tileSize = 32;
 const rows = 16;
 const columns = 16;
-let board, context;
+let board;
+let context;
 const boardWidth = tileSize * columns;
 const boardHeight = tileSize * rows;
 
@@ -39,12 +40,15 @@ const bulletVelocityY = -10;
 let score = 0;
 let gameOver = false;
 
-window.onload = function () {
+window.onload = function load() {
   // Initialize Board
   board = document.getElementById("board");
   board.width = boardWidth;
   board.height = boardHeight;
   context = board.getContext("2d");
+
+  const retryButton = document.getElementById("retryButton");
+  retryButton.addEventListener("click", restartGame);
 
   // Load Ship Image
   shipImg = new Image();
@@ -76,6 +80,7 @@ function update() {
     context.fillStyle = "white";
     context.font = "35px Sixtyfour";
     context.fillText("Game Over", boardWidth / 2 - 150, boardHeight / 2);
+    retryButton.style.display = "block";
 
     return;
   }
@@ -207,4 +212,9 @@ function detectHit(a, b) {
     a.y < b.y + b.height &&
     a.y + a.height > b.y
   );
+}
+
+function restartGame() {
+  // Hide retry button
+  window.location.reload();
 }
