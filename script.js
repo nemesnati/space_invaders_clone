@@ -82,9 +82,9 @@ function update() {
 
   requestAnimationFrame(update);
 
-  //   if (gameOver) {
-  //     return;
-  //   }
+  if (gameOver) {
+    return;
+  }
 
   context.clearRect(0, 0, board.width, board.height);
 
