@@ -17,4 +17,6 @@ body{
 
     position: relative;
     left: 47%;   
+
+    cursor: pointer;
 }
