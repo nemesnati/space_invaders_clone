@@ -77,7 +77,7 @@ window.onload = function load() {
 
 function update() {
   if (gameOver) {
-    context.fillStyle = "white";
+    context.fillStyle = "red";
     context.font = "35px Sixtyfour";
     context.fillText("Game Over", boardWidth / 2 - 150, boardHeight / 2);
     retryButton.style.display = "block";
